@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder} from "@angular/forms";
+import {TimelinesListService} from "../timelines-list.service";
 
 @Component({
   selector: 'app-timeline-details',
@@ -8,8 +9,11 @@ import { FormBuilder} from "@angular/forms";
 })
 export class TimelineDetailsComponent implements OnInit {
 
+  cardList= this.timelinesListService.getCardList(1);
+
   constructor(
    private formBuilder: FormBuilder,
+   private timelinesListService: TimelinesListService,
    ) { }
 
   timelineForm = this.formBuilder.group({
@@ -36,4 +40,7 @@ export class TimelineDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deleteCard(card:any) {
+    console.log("suppression dela measure : " + card.id);
+  }
 }

@@ -8,13 +8,19 @@ import {Card} from "./card";
 })
 export class TimelinesListService {
 
+  baseAPIUrl = 'http://localhost:8080/api/timeline';
+
   constructor(private http:HttpClient) { }
 
   getTimelinesList() {
-    return this.http.get<Timeline[]>('http://localhost:8080/api/timeline')
+    return this.http.get<Timeline[]>(this.baseAPIUrl)
   }
 
-  getCardList() {
-    return this.http.get<Card[]>('http://localhost:8080/api/timeline/1/card')
+  getCardList(timelineId: number) {
+    return this.http.get<Card[]>(this.baseAPIUrl+'/'+ timelineId + '/card')
+  }
+
+  deleteCard() {
+    return this.http.delete<Card>(this.baseAPIUrl+'/1/card/3')
   }
 }

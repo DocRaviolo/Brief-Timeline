@@ -1,7 +1,7 @@
 export interface Card {
-  cardId: number;
-  cardName: string;
-  cardCreationDate: Date;
-  cardUrl: string;
-  cardDescription: string;
+  id: number;
+  name: string;
+  creationDate: Date;
+  imageUrl: string;
+  description: string;
 }

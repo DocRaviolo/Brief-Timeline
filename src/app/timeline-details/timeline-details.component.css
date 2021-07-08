@@ -1,3 +1,9 @@
-.form {
+#timelineForm {
   display : flex;
 }
+
+#cardForm {
+  display : flex;
+}
+
+
