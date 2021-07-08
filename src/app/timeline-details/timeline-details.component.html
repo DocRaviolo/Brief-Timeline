@@ -1,0 +1,46 @@
+<body>
+<header>
+  <h1>Détails du Timeline</h1>
+</header>
+
+<form [formGroup]="timelineForm" (ngSubmit)="onSubmitTimeline()">
+  <div>
+    <label for="name">Nom</label>
+    <input id="name" type="text" formControlName="timelineName" value=timeline.name>
+  </div>
+  <div>
+    <label for="category">Catégorie</label>
+    <input id="category" type="text" formControlName="timelineCategory">
+  </div>
+  <div>
+    <label for="creationDate">Date de création</label>
+    <input id="creationDate" type="date" formControlName="timelineCreationDate">
+  </div>
+  <button class="button" type="submit">Sauver le Timeline</button>
+</form>
+
+<div>
+  <h2>Edition d'une carte</h2>
+  <button class="button" type="submit">Nouvelle carte</button>
+  <form [formGroup]="cardForm" (ngSubmit)="onSubmitCard()">
+    <div>
+      <label for="name">Nom</label>
+      <input id="cardName" type="text" formControlName="cardName">
+    </div>
+    <div>
+      <label for="cardCreationDate">Date de création</label>
+      <input id="cardCreationDate" type="date" formControlName="cardCreationDate">
+    </div>
+    <div>
+      <label for="cardUrl">URL d'image</label>
+      <input id="cardUrl" type="text" formControlName="cardUrl">
+    </div>
+    <div>
+      <label for="cardDescription">Description</label>
+      <input id="cardDescription" type="text" formControlName="cardDescription">
+    </div>
+    <button class="button" type="submit">Sauver la carte</button>
+  </form>
+</div>
+
+</body>

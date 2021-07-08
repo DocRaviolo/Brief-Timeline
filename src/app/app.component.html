@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Station Météo</title>
+  <link rel="stylesheet" href="app.component.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+  <h1>Jouons au Timeline !</h1>
+</header>
+
+<section id="buttonsection1">
+<button><a [routerLink]="['timeline']">Revenir à la liste des Timelines</a></button>
+</section>
+<section id="buttonsection2">
+  <button><a [routerLink]="['timeline-new']">Ajouter un Timeline</a></button>
+</section>
+
+<section id="content">
+  <router-outlet></router-outlet>
+</section>
+</body>
