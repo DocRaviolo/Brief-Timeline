@@ -23,6 +23,7 @@ export class TimelineDetailsComponent implements OnInit {
   });
 
    onSubmitTimeline(): void {
+
    this.timelineForm.reset();
   }
 

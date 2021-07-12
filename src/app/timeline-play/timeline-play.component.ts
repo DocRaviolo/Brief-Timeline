@@ -24,5 +24,4 @@ export class TimelinePlayComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
