@@ -22,7 +22,7 @@ export class TimelinesListComponent implements OnInit {
   constructor(private timelinesListService: TimelinesListService) { }
 
   deleteTimeline(timeline:any) {
-    console.log("suppression dela measure : " + timeline.id);
+    console.log("suppression du timeline : " + timeline.id);
   }
 
   ngOnInit(): void {

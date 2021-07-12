@@ -6,4 +6,11 @@
   display : flex;
 }
 
+table {
+  width: 70%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border: solid;
+}
+
 

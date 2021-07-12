@@ -20,7 +20,7 @@ export class TimelinesListService {
     return this.http.get<Card[]>(this.baseAPIUrl+'/'+ timelineId + '/card')
   }
 
-  deleteCard() {
-    return this.http.delete<Card>(this.baseAPIUrl+'/1/card/3')
+  deleteCard(cardId: number) {
+    return this.http.delete<Card>(this.baseAPIUrl+'/1/card/' + cardId)
   }
 }

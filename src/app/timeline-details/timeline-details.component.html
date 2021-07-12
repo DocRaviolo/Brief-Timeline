@@ -19,7 +19,7 @@
   <button class="button" type="submit">Sauver le Timeline</button>
 </form>
 
-<div>
+<div id="cardsDiv">
   <h2>Edition d'une carte</h2>
   <form id="cardForm"[formGroup]="cardForm" (ngSubmit)="onSubmitCard()">
     <button class="button" type="submit">Nouvelle carte</button>
@@ -28,8 +28,8 @@
       <input id="cardName" type="text" formControlName="cardName">
     </div>
     <div>
-      <label for="cardCreationDate">Date de création</label>
-      <input id="cardCreationDate" type="date" formControlName="cardCreationDate">
+      <label for="cardDate">Date de création</label>
+      <input id="cardDate" type="date" formControlName="cardDate">
     </div>
     <div>
       <label for="cardUrl">URL d'image</label>
@@ -41,19 +41,33 @@
     </div>
     <button class="button" type="submit">Sauver la carte</button>
   </form>
-</div>
 
-<div>
+<h2>Liste des cartes</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Date</th>
+    <th>URL d'image</th>
+    <th>Description</th>
+    <th>Editer ?</th>
+    <th>Supprimer ?</th>
+  </tr>
+  </thead>
+  <tbody>
   <tr *ngFor="let card of cardList | async">
     <td> {{card.id}}</td>
     <td> {{card.name }}</td>
-    <td> {{card.creationDate }}</td>
+    <td> {{card.date }}</td>
     <td> {{card.imageUrl }}</td>
     <td> {{card.description }}</td>
     <td><a [routerLink]="['/timeline/'+card.id]">Editer</a></td>
-    <td><a [routerLink]="['/timeline-play/'+card.id]">Jouer</a></td>
     <td><button (click)="deleteCard(card)">Supprimer</button></td>
   </tr>
+  </tbody>
+</table>
 </div>
+
 
 </body>

@@ -1,1 +1,19 @@
-<p>timeline-play works!</p>
+<form id="timelinePlayForm"[formGroup]="timelinePlayForm" (ngSubmit)="onSubmitTimelinePlay()">
+  <div>
+    <input id="name" type="text"placeholder="Entrez la date" formControlName="timelineName">
+  </div>
+  <button class="button" type="submit">DEVINER</button>
+</form>
+
+<!-- Une section avec la carte à deviner -->
+<!-- Une carte que je vais afficher dans une div avec ses propriétés
+<div *ngIf="guessingCard">
+  <h2>Carte à deviner</h2>
+  <h3>{{guessingCard.name}}</h3>
+</div> -->
+<!-- Une section avec la liste des cartes déjà devinées -->
+<!-- Une ngFor pour afficher toutes les cartes déjà devinées
+<h2>Cartes déjà devinées</h2>
+<div *ngFor="let guessedCard of cardsAlreadyGuessed">
+  <h3>{{guessedCard.name}}</h3>
+</div>  -->

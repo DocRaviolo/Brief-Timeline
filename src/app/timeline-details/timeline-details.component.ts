@@ -28,7 +28,7 @@ export class TimelineDetailsComponent implements OnInit {
 
   cardForm = this.formBuilder.group({
     cardName: '',
-    cardCreationDate: '',
+    cardDate: '',
     cardUrl:'',
     cardDescription:'',
   });
@@ -41,6 +41,8 @@ export class TimelineDetailsComponent implements OnInit {
   }
 
   deleteCard(card:any) {
-    console.log("suppression dela measure : " + card.id);
+    console.log("suppression de la carte : " + card.id);
   }
+
+ // document.getElementById("cardsDiv").style.display = none;
 }

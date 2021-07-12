@@ -23,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
       {path: 'timeline', component:TimelinesListComponent},
       {path: 'timeline-new', component: TimelineDetailsComponent},
       {path: 'timeline/1', component: TimelineDetailsComponent},
-      {path: 'timeline-play', component: TimelinePlayComponent}
+      {path: 'timeline-play/1', component: TimelinePlayComponent}
     ])
   ],
   providers: [],
